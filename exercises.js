@@ -8,10 +8,14 @@
 var doubleArray = function(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2) 
+    result.push(arr[i] * 2); 
   }
-  return result
-}
+  return result;
+};
+
+// console.log(doubleArray([1,2,3]));
+// console.log(doubleArray([10,20,30]));
+
 
 /* #sumArrays
  *
@@ -21,7 +25,18 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+
+var sumArrays = function (arr,arr2){
+  var result = 0;
+  for (var i=0; i<arr.length; i++) {
+    result += arr[i] + arr2[i];
+  }
+
+  return result;
+};
+
+// console.log(sumArrays([1,2,3])(2,3,4));
+
 
 /* #stringCount
  *
@@ -30,7 +45,13 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function (str){
+  return str.length;
+};
+
+// console.log(stringCount("cat"));
+// console.log(stringCount("roses"));
+
 
 /* #arrayLength
  *
@@ -39,7 +60,11 @@ var stringCount;
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function (arr){
+  return arr.length;
+};
+
+// console.log(arrayLength([1,2,3,4,5]));
 
 /* #countAll
  *
@@ -48,7 +73,16 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function (arr){
+  var result = 0;
+  for (var i=0; i<arr.length; i++) {
+    result += arr[i];
+  }
+  return result;
+};
+
+// console.log(countAll([1,2,3,4,5]));
+
 
 /* #countStrings
  *
@@ -379,8 +413,8 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
   stringCount: null,
   arrayLength: null,
   countAll: null,
@@ -419,4 +453,4 @@ module.exports = {
   charCountMap: null,
   frequencyMap: null,
   tupleConvertToObject: null
-}
+};
