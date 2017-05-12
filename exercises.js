@@ -31,7 +31,6 @@ var sumArrays = function (arr,arr2){
   for (var i=0; i<arr.length; i++) {
     result += arr[i] + arr2[i];
   }
-
   return result;
 };
 
